@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control.observacion_avance;
+package generacion_de_reportes.api_modulos.observacion_avance;
 
 import java.util.List;
 

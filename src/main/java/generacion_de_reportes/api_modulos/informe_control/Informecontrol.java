@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control.informe_control;
+package generacion_de_reportes.api_modulos.informe_control;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

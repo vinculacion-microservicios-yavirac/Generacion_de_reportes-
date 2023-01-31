@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control.observacion_avance;
+package generacion_de_reportes.api_modulos.avance_cumplimiento;
 
 import java.util.List;
 
@@ -14,39 +14,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/observacionesavance")
+@RequestMapping("api/avancecumplimiento")
 @CrossOrigin({"*"})
-public class ObservacionavanceController {
-    @Autowired ObservacionavanceService observacionavanceService;
+public class AvancecumplimientoController {
+    @Autowired AvancecumplimientoService avancecumplimientoService;
 
 
     @GetMapping("/")
-    public List<Observacionavance> findAll(){
-        return observacionavanceService.findAll();
+    public List<Avancecumplimiento> findAll(){
+        return avancecumplimientoService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Observacionavance   findById(@PathVariable Long id){
-        return observacionavanceService.findById(id);
+    public Avancecumplimiento findById(@PathVariable Long id){
+        return avancecumplimientoService.findById(id);
     }
 
 
     @PostMapping("/")
-    public Observacionavance save(@RequestBody Observacionavance entity){
-        return observacionavanceService.save(entity);
+    public Avancecumplimiento save(@RequestBody Avancecumplimiento entity){
+        return avancecumplimientoService.save(entity);
     }
 
 
     @PutMapping("/")
-    public Observacionavance update(@RequestBody Observacionavance entity){
-        return observacionavanceService.save(entity);
+    public Avancecumplimiento update(@RequestBody Avancecumplimiento entity){
+        return avancecumplimientoService.save(entity);
     }
     
 
     @DeleteMapping("/{id}/")
     public void deleteById (@PathVariable Long id ){
-        observacionavanceService.deleteById(id);
+        avancecumplimientoService.deleteById(id);
     }
-    
+
     
 }

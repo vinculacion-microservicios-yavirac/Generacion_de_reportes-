@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control.informe_control;
+package generacion_de_reportes.api_modulos.observacion_avance;
 
 import java.util.List;
 
@@ -13,43 +13,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
 @RestController
-@RequestMapping("api/informecontrol")
+@RequestMapping("api/observacionesavance")
 @CrossOrigin({"*"})
-
-public class InformecontrolController {
-
-    @Autowired InformecontrolService informecontrolService;
+public class ObservacionavanceController {
+    @Autowired ObservacionavanceService observacionavanceService;
 
 
     @GetMapping("/")
-    public List<Informecontrol> findAll(){
-        return informecontrolService.findAll();
+    public List<Observacionavance> findAll(){
+        return observacionavanceService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Informecontrol   findById(@PathVariable Long id){
-        return informecontrolService.findById(id);
+    public Observacionavance   findById(@PathVariable Long id){
+        return observacionavanceService.findById(id);
     }
 
 
     @PostMapping("/")
-    public Informecontrol save(@RequestBody Informecontrol entity){
-        return informecontrolService.save(entity);
+    public Observacionavance save(@RequestBody Observacionavance entity){
+        return observacionavanceService.save(entity);
     }
 
 
     @PutMapping("/")
-    public Informecontrol update(@RequestBody Informecontrol entity){
-        return informecontrolService.save(entity);
+    public Observacionavance update(@RequestBody Observacionavance entity){
+        return observacionavanceService.save(entity);
     }
     
 
     @DeleteMapping("/{id}/")
     public void deleteById (@PathVariable Long id ){
-        informecontrolService.deleteById(id);
+        observacionavanceService.deleteById(id);
     }
+    
     
 }

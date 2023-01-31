@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control;
+package generacion_de_reportes.api_modulos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

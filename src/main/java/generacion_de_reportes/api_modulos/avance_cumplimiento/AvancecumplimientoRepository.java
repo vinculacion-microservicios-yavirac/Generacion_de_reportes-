@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulo_informe_control.avance_cumplimiento;
+package generacion_de_reportes.api_modulos.avance_cumplimiento;
 
 import java.util.List;
 
