@@ -1,4 +1,4 @@
-package generacion_de_reportes.api_modulos.formulario_final_tutor;
+package generacion_de_reportes.api_modulos.formulario_final_estudiante;
 
 import java.io.File;
 import java.util.Date;
@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Formulariofinaltutor {
+public class Formulariofinalestudiante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
