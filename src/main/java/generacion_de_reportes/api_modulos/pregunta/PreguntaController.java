@@ -11,43 +11,45 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.http.HttpStatus;
 
 
 @RestController
-@RequestMapping("api/pregunta")
+@RequestMapping("/api/pregunta")
 @CrossOrigin({"*"})
 public class PreguntaController {
     
     @Autowired PreguntaService preguntaService;
 
 
-    @GetMapping("/")
+    @GetMapping("/findAll")
     public List<Pregunta> findAll(){
         return preguntaService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/findById/{id}")
     public Pregunta findById(@PathVariable Long id){
         return preguntaService.findById(id);
     }
 
 
-    @PostMapping("/")
-    public Pregunta save(@RequestBody Pregunta entity){
-        return preguntaService.save(entity);
+    @PostMapping("/save")
+    public Pregunta save(@RequestBody Pregunta pregunta){
+        return preguntaService.save(pregunta);
     }
 
 
-    @PutMapping("/")
-    public Pregunta update(@RequestBody Pregunta entity){
-        return preguntaService.save(entity);
+    @PutMapping("/update")
+    public Pregunta update(@RequestBody Pregunta pregunta){
+        return preguntaService.save(pregunta);
     }
     
 
-    @DeleteMapping("/{id}/")
-    public void deleteById (@PathVariable Long id ){
+    @DeleteMapping("/deleteById/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id ){
         preguntaService.deleteById(id);
     }
 }

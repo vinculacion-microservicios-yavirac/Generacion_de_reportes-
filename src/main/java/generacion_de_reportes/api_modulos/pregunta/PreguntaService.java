@@ -10,8 +10,8 @@ public class PreguntaService {
 
     @Autowired PreguntaRepository preguntaRepository;
 
-    public Pregunta save(Pregunta entity){
-        return preguntaRepository.save(entity);
+    public Pregunta save(Pregunta pregunta){
+        return preguntaRepository.save(pregunta);
 
     }
 
