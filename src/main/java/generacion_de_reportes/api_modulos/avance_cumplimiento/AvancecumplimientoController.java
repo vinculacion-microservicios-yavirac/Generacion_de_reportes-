@@ -31,7 +31,7 @@ public class AvancecumplimientoController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/save")
     public Avancecumplimiento save(@RequestBody Avancecumplimiento entity){
         return avancecumplimientoService.save(entity);
     }
