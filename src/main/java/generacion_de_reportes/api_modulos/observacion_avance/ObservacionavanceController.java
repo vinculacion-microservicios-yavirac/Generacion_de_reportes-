@@ -31,7 +31,7 @@ public class ObservacionavanceController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/save")
     public Observacionavance save(@RequestBody Observacionavance entity){
         return observacionavanceService.save(entity);
     }

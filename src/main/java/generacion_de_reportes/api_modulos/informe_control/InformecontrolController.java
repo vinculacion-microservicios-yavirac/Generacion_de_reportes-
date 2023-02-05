@@ -35,7 +35,7 @@ public class InformecontrolController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/save")
     public Informecontrol save(@RequestBody Informecontrol entity){
         return informecontrolService.save(entity);
     }
